@@ -1,0 +1,50 @@
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage{MnSymbol}
+\usepackage{xcolor}
+\usepackage{xspace}
+
+\definecolor{mygray}{gray}{0.90}
+\definecolor{mydarkgray}{gray}{0.30}
+\definecolor{mygreen}{rgb}{0.2,0.7,0}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myblue}{rgb}{0,0,0.7}
+\definecolor{myred}{rgb}{0.7,0.2,0}
+
+% this together with keywordstyle makes sure bold
+% keywords are not used for lstinline
+\makeatletter
+\lst@AddToHook{TextStyle}{\let\lst@basicstyle\ttfamily\small\fontfamily{pcr}\selectfont}
+\makeatother
+
+\lstset{
+   breaklines=true,%
+   basicstyle=\ttfamily\footnotesize,%
+%   escapechar=|,%
+   commentstyle=\color{myred},%
+   showstringspaces=false,
+   backgroundcolor=\color{black!6},
+%   numbers=none,
+%   numberstyle=\tiny\color{mydarkgray},
+%   numbersep=5pt,
+%   xleftmargin=0.5cm,
+%   xrightmargin=0.5cm,
+   keywordstyle=\lst@ifdisplaystyle\bfseries\fi,
+   numberstyle=\ttfamily
+}
+\lstset{
+   morekeywords={size_t,dash,Array,Team,Pattern,init,
+        finalize,begin,end,lbegin,lend,local,at,HView,
+        hview,NONE,CYCLIC,BLOCKCYCLIC,BLOCKED,All,split,
+        Shared,Mutex,SizeSpec,DistSpec,ROW_MAJOR,COL_MAJOR,
+        GlobRef,GlobPtr,GlobIter,GlobMem,std,thread,myid,
+        TeamSpec,TilePattern,barrier,fill,NArray} }
+
+\lstset{prebreak=\raisebox{0ex}[0ex][0ex]
+        {\ensuremath{\rhookswarrow}}}
+
+
+\newcommand{\Matrix}{\lstinline{dash::NArray}\xspace}
+
+\usepackage{geometry}
+\geometry{a4paper,left=25mm,right=25mm,top=25mm,bottom=25mm}
