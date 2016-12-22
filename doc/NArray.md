@@ -151,7 +151,7 @@ integer. So the number of block columns in this example is $\left
 \lceil{10/4}\right \rceil = 3$ and the last unit (unit 3) is
 underfilled.
 
-![Two simple examples for a $16 \times 10$ DASH blocked pattern, with blocking over the rows (left) or columns (right).\label{fig:blocked_pattern}](fig/pattern_blocked)
+![Two simple examples for a $16 \times 10$ DASH blocked pattern, with blocking over the rows (left) or columns (right).\label{fig:blocked_pattern}](fig/pattern_blocked.svg)
 
 More details on the DASH pattern concept can be found in
 Sect. xxx.
